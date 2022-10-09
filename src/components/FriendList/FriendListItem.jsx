@@ -1,4 +1,5 @@
 import { StyledItem, IsOnlineColor } from './FriendListItem.styled';
+import PropTypes from 'prop-types';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
@@ -8,4 +9,10 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
       <p style={{ marginLeft: '5px' }}>{name}</p>
     </StyledItem>
   );
+};
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
